@@ -9,16 +9,22 @@ let cursorX, cursorY, rollBarTransaltePerc = 0;
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', updateMouseMove);
     Array.from(document.querySelectorAll('.cursor-hoverable')).forEach(element => [{event: 'mouseenter', isHovering: true}, {event: 'mouseleave', isHovering: false}].forEach(obj => element.addEventListener(obj.event, () => document.querySelector('.cursor-frame').classList.toggle('cursor-hover', obj.isHovering))));
-    document.querySelector('.navigation-btn').addEventListener('click', () => document.querySelector('.navigation-container').classList.toggle('navigation-shown'))
+    document.querySelector('.navigation-btn').addEventListener('click', toggleNavigation)
+    document.querySelector('.navigation-outside').addEventListener('click', toggleNavigation)
     moveCursor();
     moveHeaderRentagle();
     moveMarquees();
-})
+});
+
+function toggleNavigation(){
+    document.querySelector('.navigation-frame').classList.toggle('navigation-shown');
+    document.body.classList.toggle('scroll-block')
+}
 
 function moveCursor(){
     const cursor = document.querySelector('.cursor');
-    const newCursorX = lowPassFilter(cursorX, cursor.offsetLeft, 0.15)
-    const newCursorY = lowPassFilter(cursorY, cursor.offsetTop, 0.15)
+    const newCursorX = lowPassFilter(cursorX, cursor.offsetLeft, 0.3)
+    const newCursorY = lowPassFilter(cursorY, cursor.offsetTop, 0.3)
     cursor.style.top  = `${newCursorY}px`
     cursor.style.left = `${newCursorX}px`
     requestAnimationFrame(moveCursor)
@@ -28,17 +34,17 @@ function moveHeaderRentagle(){
     const rectangle = document.querySelector('.background-rectangle');
     const rectangleRect = rectangle.getBoundingClientRect();
     const cursorRect = document.querySelector('.cursor').getBoundingClientRect();
-    const ratio = 0.02;
-    const inclination = 40
-    rectangle.style.transform = ` rotate(${inclination}deg) translate(${(-rectangleRect.width / 2) - ((cursorRect.left - rectangleRect.left) * ratio)}px, ${(-rectangleRect.height / 2) - ((cursorRect.top - rectangleRect.top) * ratio)}px) `;
+    const ratio = 0.01;
+    const inclination = 30
+    rectangle.style.transform = `translate(${(-rectangle.offsetWidth / 2) - (cursorRect.left - rectangleRect.left ) * ratio}px, ${(-rectangle.offsetLeft / 2) -(cursorRect.top - rectangleRect.top) * ratio}px) rotate(${inclination}deg) `;
     requestAnimationFrame(moveHeaderRentagle)
 }
 
 function moveMarquees(){
-    rollBarTransaltePerc = ((rollBarTransaltePerc + 0.05) % 100)
+    rollBarTransaltePerc = ((rollBarTransaltePerc + .075) % 100)
     const titleItems = Array.from(document.querySelectorAll('.title-marquee-items'))
     const aptitudeItems = Array.from(document.querySelectorAll('.aptitudes-marquee-items'))
-    titleItems.map(item => item.style.transform = `translateX(${rollBarTransaltePerc - 100}%)`)
+    titleItems.map(item => item.style.transform = `translateX(${-rollBarTransaltePerc }%)`)
     aptitudeItems.map(item => item.style.transform = `translateX(${rollBarTransaltePerc - 100}%)`)
     requestAnimationFrame(moveMarquees)
 }
