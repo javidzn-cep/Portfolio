@@ -23,8 +23,8 @@ function toggleNavigation(){
 
 function moveCursor(){
     const cursor = document.querySelector('.cursor');
-    const newCursorX = lowPassFilter(cursorX, cursor.offsetLeft, 0.3)
-    const newCursorY = lowPassFilter(cursorY, cursor.offsetTop, 0.3)
+    const newCursorX = lowPassFilter(cursorX, cursor.offsetLeft, 0.6)
+    const newCursorY = lowPassFilter(cursorY, cursor.offsetTop, 0.6)
     cursor.style.top  = `${newCursorY}px`
     cursor.style.left = `${newCursorX}px`
     requestAnimationFrame(moveCursor)
@@ -44,7 +44,7 @@ function moveMarquees(){
     rollBarTransaltePerc = ((rollBarTransaltePerc + .075) % 100)
     const titleItems = Array.from(document.querySelectorAll('.title-marquee-items'))
     const aptitudeItems = Array.from(document.querySelectorAll('.aptitudes-marquee-items'))
-    titleItems.map(item => item.style.transform = `translateX(${-rollBarTransaltePerc }%)`)
-    aptitudeItems.map(item => item.style.transform = `translateX(${rollBarTransaltePerc - 100}%)`)
+    titleItems.map(item => item.style.transform = `translateX(${rollBarTransaltePerc -100 }%)`)
+    aptitudeItems.map(item => item.style.transform = `translateX(${-rollBarTransaltePerc }%)`)
     requestAnimationFrame(moveMarquees)
 }

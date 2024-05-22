@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Javier Díaz Neira">
     <title>Portfolio | Javier Díaz Neira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Rufina:wght@400;700&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/scrollAnimations.js"></script>
 </head>
 <body>
     <div class="noise"></div>
@@ -29,9 +33,11 @@
                 <div class="navigation-link cursor-hoverable">GET IN TOUCH!</div>
             </div>
             <div class="navigation-info">
-                <!-- <div class="navigation-info-mail">javier.diaz51202@gmail.com</div> -->
+                <div class="navigation-info-mail">javier.diaz51202@gmail.com</div>
                 <div class="navigation-social-links">
-                    
+                    <a class="navigation-social-link cursor-hoverable" href="https://linkedin.com/in/javier-d%C3%ADaz-neira-120385153/" target="_blank">LINKEDIN</a>
+                    <a class="navigation-social-link cursor-hoverable" href="https://instagram.com/javidzn" target="_blank">INSTAGRAM</a>
+                    <a class="navigation-social-link cursor-hoverable" href="https://github.com/javidzn-cep" target="_blank">GITHUB</a>
                 </div>
             </div>
         </div>
@@ -86,6 +92,229 @@
                 <div class="aptitudes-marquee-item">UNIQUE DESIGN</div>
                 <div class="aptitudes-marquee-item">PROBLEM SOLVER</div>
             </div>
+        </div>
+    </div>
+    <div class="ido-frame">
+        <div class="section-title-frame">
+            <div class="section-title-container">
+                <div class="section-title">WHAT I DO</div>
+            </div>
+            <div class="section-subtitle-continer">
+                <div class="section-subtitle-title">( SERVICES )</div>
+                <div class="section-subtitle-content">My passion for excellence drives me to create exceptional digital experiences. With a focus on innovation and user satisfaction, I bring a unique blend of skills to every project. Here's a closer look at what I do</div>
+            </div>
+        </div>
+        <div class="idos-container">
+            <div class="ido-container">
+                <div class="ido-title-container">
+                    <div class="ido-title">Front-End Development</div>
+                    <svg class="ido-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                        <path d="M19.6813 40.7407C19.0389 40.7407 18.4958 40.2755 18.3402 39.6521C17.8442 37.6654 16.8948 35.5526 15.4919 33.3142C13.8298 30.6263 11.4603 28.1331 8.38348 25.8343C5.7075 23.8117 3.03148 22.4325 0.355484 21.6967C-0.278305 21.5225 -0.740723 20.9605 -0.740723 20.3032C-0.740723 19.6588 -0.296093 19.1032 0.32357 18.9263C2.94723 18.1772 5.47472 16.961 7.90607 15.2778C10.6999 13.3327 13.034 10.9986 14.9084 8.27546C16.5666 5.84966 17.7048 3.4505 18.3231 1.07802C18.4851 0.45649 19.0323 0 19.6746 0C20.3241 0 20.875 0.466599 21.0331 1.0966C21.39 2.51887 21.9478 3.97467 22.7064 5.46392C23.6614 7.30292 24.8813 9.07115 26.3667 10.7687C27.8873 12.4309 29.5851 13.9339 31.4593 15.2778C33.9086 17.014 36.3985 18.2337 38.9294 18.9371C39.5502 19.1097 40 19.6624 40 20.3067C40 20.9607 39.5366 21.518 38.9059 21.691C37.3017 22.1307 35.6505 22.8401 33.9526 23.8185C31.9014 25.0209 29.9916 26.4531 28.2233 28.1154C26.4552 29.7422 25.0052 31.4574 23.8734 33.2609C22.4678 35.5041 21.5174 37.6332 21.0223 39.6487C20.8688 40.2739 20.3249 40.7407 19.6813 40.7407Z"/>
+                    </svg>
+                </div>
+                <div class="ido-content-container">
+                    <div class="ido-content-description">I craft unique, custom-coded websites tailored to your brand's identity. Emphasizing scalability, performance, accessibility, and captivating animations, I ensure a memorable user experience.</div>
+                    <div class="ido-keywords-container">
+                        <div class="ido-keyword">CMS Integration</div>
+                        <div class="ido-keyword">Motion & Animations</div>
+                        <div class="ido-keyword">3D Development</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ido-container">
+                <div class="ido-title-container">
+                    <div class="ido-title">Web Design</div>
+                    <svg class="ido-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+                        <path d="M44.3625 20.6377L35.5072 5.27064C35.0881 4.54074 34.4837 3.93438 33.7552 3.51279C33.0267 3.0912 32.1999 2.8693 31.3582 2.86951H13.6477C12.8116 2.86341 11.9885 3.07658 11.2605 3.48778C10.5325 3.89897 9.92505 4.49382 9.49863 5.21301L0.643367 20.5801C0.22189 21.3101 0 22.1382 0 22.9812C0 23.8241 0.22189 24.6522 0.643367 25.3822L9.49863 40.7493C9.9217 41.4743 10.5274 42.0758 11.2554 42.4937C11.9834 42.9116 12.8083 43.1314 13.6477 43.1311H31.3582C32.192 43.1373 33.0131 42.9262 33.7406 42.5187C34.4681 42.1111 35.077 41.5212 35.5072 40.8069L44.3625 25.4399C44.7803 24.7086 45 23.881 45 23.0388C45 22.1966 44.7803 21.369 44.3625 20.6377Z"/>
+                    </svg>
+                </div>
+                <div class="ido-content-container">
+                    <div class="ido-content-description">I design user-centric websites that enhance your brand and drive business goals. Clean typography and minimal layouts has my full attention to create a compelling online presence.</div>
+                    <div class="ido-keywords-container">
+                        <div class="ido-keyword">Responsive Design</div>
+                        <div class="ido-keyword">UX Writing</div>
+                        <div class="ido-keyword">Prototyping</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ido-container">
+                <div class="ido-title-container">
+                    <div class="ido-title">Back-End Development</div>
+                    <svg class="ido-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 45">
+                        <path d="M4.73685 27.8848L16.4104 10.0573C17.0726 9.05613 17.9726 8.23464 19.0299 7.66631C20.0872 7.09799 21.2688 6.80054 22.4692 6.80054C23.6696 6.80054 24.8512 7.09799 25.9085 7.66631C26.9658 8.23464 27.8658 9.05613 28.528 10.0573L40.2015 27.7897C40.9229 28.8843 41.3346 30.1537 41.3927 31.4634C41.451 32.7729 41.1541 34.0739 40.533 35.2284C39.9119 36.3828 38.9898 37.3478 37.8649 38.0206C36.7397 38.6934 35.4538 39.0496 34.1427 39.0509H10.7957C9.49962 39.0385 8.23041 38.6798 7.11974 38.0117C6.00907 37.3437 5.0974 36.3908 4.47924 35.2514C3.86108 34.1122 3.559 32.8283 3.60429 31.533C3.64959 30.2377 4.04062 28.9781 4.73685 27.8848Z"/>
+                    </svg>
+                </div>
+                <div class="ido-content-container">
+                    <div class="ido-content-description">I build the backbone of your website with robust and secure solutions. Ensuring efficient and scalable data architecture, I guarantee optimal performance and seamless integration with user interfaces.</div>
+                    <div class="ido-keywords-container">
+                        <div class="ido-keyword">Database Management</div>
+                        <div class="ido-keyword">RESTful APIs</div>
+                        <div class="ido-keyword">Web Security</div>
+                    </div>
+                </div>
+            </div>
+            <div class="ido-container">
+                <div class="ido-title-container">
+                    <div class="ido-title">SEO</div>
+                    <svg class="ido-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+                        <rect xmlns="http://www.w3.org/2000/svg" width="32" height="32" rx="8"></rect>
+                    </svg>
+                </div>
+                <div class="ido-content-container">
+                    <div class="ido-content-description">I optimize your website for search engines, enhancing visibility and attracting high-quality organic traffic. By implementing keyword strategies, on-page optimization, and relevant content creation, I boost your search engine rankings.</div>
+                    <div class="ido-keywords-container">
+                        <div class="ido-keyword">On-Page Optimization</div>
+                        <div class="ido-keyword">Keyword Research</div>
+                        <div class="ido-keyword">Link Building</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="works-frame">
+        <div class="section-title-frame">
+            <div class="section-title-container">
+                <div class="section-title">SELECTED WORKS</div>
+                <div class="section-projects-number">(6)</div>
+            </div>
+            <div class="section-subtitle-continer">
+                <div class="section-subtitle-title">( PROJECTS )</div>
+                <div class="section-subtitle-content">I am proud to present a selection of my most impactful projects. Each piece reflects my commitment to excellence, innovation, and meticulous attention to detail. These works showcase my ability to translate complex ideas into elegant, functional, and user-friendly digital solutions. From groundbreaking web designs to robust backend systems, each project highlights my diverse skill set and passion for creating exceptional digital experiences. Explore these highlights to see how I can bring your vision to life.</div>
+            </div>
+        </div>
+        <div class="works-container">
+            <div class="works-background-text-container flex-center">
+                <div class="works-background-text">WORKS</div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+            <div class="work-container">
+                <div class="work-img-frame">
+                    <div class="work-bg-image-container">
+                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                    </div>
+                    <div class="work-img-container">
+
+                    </div>
+                </div>
+                <div class="work-info-container">
+                    <div class="work-title-container">
+                        <div class="work-title">STREETFEED</div>
+                        <div class="work-tags-container">
+                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">UI</div>
+                            <div class="work-tag">UX</div>
+                        </div>
+                    </div>
+                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                </div>
+            </div>
+        </div>
+        <div class="circle-transition-container">
+            <div class="circle-transition"></div>
         </div>
     </div>
 </body>
