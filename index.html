@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/scrollAnimations.js"></script>
 </head>
@@ -26,11 +27,11 @@
             <div class="nav-decoration-circle nav-circle-1"></div>
             <div class="nav-decoration-circle nav-circle-2"></div>
             <div class="navigation-links">
-                <div class="navigation-link cursor-hoverable">HOME</div>
-                <div class="navigation-link cursor-hoverable">WHAT I DO</div>
-                <div class="navigation-link cursor-hoverable">SELECTED WORKS</div>
-                <div class="navigation-link cursor-hoverable">ABOUT ME</div>
-                <div class="navigation-link cursor-hoverable">GET IN TOUCH!</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".header">HOME</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".ido-frame">WHAT I DO</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".works-frame">SELECTED WORKS</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".who-i-am-photography-container">ABOUT ME</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".get-in-touch-frame">GET IN TOUCH!</div>
             </div>
             <div class="navigation-info">
                 <div class="navigation-info-mail">javier.diaz51202@gmail.com</div>
@@ -101,7 +102,7 @@
             </div>
             <div class="section-subtitle-continer">
                 <div class="section-subtitle-title">( SERVICES )</div>
-                <div class="section-subtitle-content">My passion for excellence drives me to create exceptional digital experiences. With a focus on innovation and user satisfaction, I bring a unique blend of skills to every project. Here's a closer look at what I do</div>
+                <div class="section-subtitle-content">My passion for excellence drives me to create exceptional digital experiences. With a focus on innovation and user satisfaction, I bring a unique blend of skills to every project. Here's a closer look at what I do.</div>
             </div>
         </div>
         <div class="idos-container">
@@ -155,17 +156,17 @@
             </div>
             <div class="ido-container">
                 <div class="ido-title-container">
-                    <div class="ido-title">SEO</div>
+                    <div class="ido-title">IoT and Connectivity</div>
                     <svg class="ido-title-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
                         <rect xmlns="http://www.w3.org/2000/svg" width="32" height="32" rx="8"></rect>
                     </svg>
                 </div>
                 <div class="ido-content-container">
-                    <div class="ido-content-description">I optimize your website for search engines, enhancing visibility and attracting high-quality organic traffic. By implementing keyword strategies, on-page optimization, and relevant content creation, I boost your search engine rankings.</div>
+                    <div class="ido-content-description">I specialize in integrating web applications with IoT devices, such as Arduinos, using serial communication and Bluetooth technology. This enables real-time data transfer and control, enhancing your project's interactivity and functionality.</div>
                     <div class="ido-keywords-container">
-                        <div class="ido-keyword">On-Page Optimization</div>
-                        <div class="ido-keyword">Keyword Research</div>
-                        <div class="ido-keyword">Link Building</div>
+                        <div class="ido-keyword">Serial Communication Integration</div>
+                        <div class="ido-keyword">Bluetooth Connectivity</div>
+                        <div class="ido-keyword">Real-time Data Monitoring and Control</div>
                     </div>
                 </div>
             </div>
@@ -187,135 +188,174 @@
                 <div class="works-background-text">WORKS</div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-1.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/streetfeed.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
                         <div class="work-title">STREETFEED</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
-                            <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">WEB DESIGN</div>
+                            <div class="work-tag">JS ANIMATIONS</div>
+                            <div class="work-tag">MAP INTEGRATION</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">StreetFeed connects volunteers to help the homeless by providing food. The platform features three roles: providers supply the food, riders use an interactive map to locate and deliver food, and mappers update the map. The landing page, designed and developed by me, boasts an excellent user-friendly interface.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-4.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/UIC-project.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
-                        <div class="work-title">STREETFEED</div>
+                        <div class="work-title">UIC PROJECT</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
-                            <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">IOT</div>
+                            <div class="work-tag">BLUETOOTH</div>
+                            <div class="work-tag">THREE.JS</div>
+                            <div class="work-tag">C++</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">This project developed together with the <i>International University of Catalonia</i>, involves programming an Arduino Nano 33 BLE Sense Rev 2 to collect IMU sensor data, perform sensor fusion, and transmit it via Bluetooth Low Energy to a web app using the Web Bluetooth API. This tool is for physiotherapy data collection and measurement. Note that this project is still a work in progress and not the final product.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-2.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/robot-rehab.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
-                        <div class="work-title">STREETFEED</div>
+                        <div class="work-title">ROBOT REHAB</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
-                            <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">IOT</div>
+                            <div class="work-tag">NODE.JS</div>
+                            <div class="work-tag">BACK-END DEVELOPMENT</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">A rehabilitation game using a prosthesis, designed by <i>International University of Catalonia</i> Students, which is connected to an Arduino Uno, which sends data via serial port to a computer. Node.js captures the data and sends it through Socket.io to a web-based game, gamifying elbow recovery exercises. This was a rapid, eight-day project.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-3.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/pomodoro-task-manager.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
-                        <div class="work-title">STREETFEED</div>
+                        <div class="work-title">TASK MANAGER</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
+                            <div class="work-tag">FRONT-END DEVELOPMENT</div>
                             <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">DRAG-N-DROP</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">A productivity tool combining a Pomodoro timer with a Kanban table. Developed to practice drag-and-drop functionality, it features a simple, attractive design to enhance task management.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-5.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/autoevaluacio.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
-                        <div class="work-title">STREETFEED</div>
+                        <div class="work-title">SELF-EVALUATION</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
-                            <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">BACKEND-DEVELOPMENT</div>
+                            <div class="work-tag">API INTEGRATION</div>
+                            <div class="work-tag">MYSQL</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">This project integrates MySQL with a Laravel backend and a Vue.js frontend. It creates a self-assessment system for students, with three user roles: students, teachers, and administrators. Eloquent is used to access the database, and Auth handles user authentication. Users can manage and view self-assessment results within their modules.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame">
+                <div class="work-img-frame cursor-hoverable">
                     <div class="work-bg-image-container">
-                        <img class="work-bg-image" src="./media/bg-works-texture-1.jpg">
+                        <img class="work-bg-image" src="./media/bg-textures/texture-6.jpg">
                     </div>
                     <div class="work-img-container">
-
+                        <video class="work-demostration-image" src="media/works-demostration/adrenalyn.mp4" autoplay loop muted></video>
                     </div>
                 </div>
                 <div class="work-info-container">
                     <div class="work-title-container">
-                        <div class="work-title">STREETFEED</div>
+                        <div class="work-title">ADRENALYN 2010-11</div>
                         <div class="work-tags-container">
-                            <div class="work-tag">DESIGN</div>
-                            <div class="work-tag">UI</div>
-                            <div class="work-tag">UX</div>
+                            <div class="work-tag">MSQL</div>
+                            <div class="work-tag">PHP</div>
+                            <div class="work-tag">BACKEND-DEVELOPMENT</div>
                         </div>
                     </div>
-                    <div class="work-description">Redefining the way we watch live sports with next-generation video engagement</div>
+                    <div class="work-description">My first PHP proyect, using PDO, this project retrieves and displays card information from a database, formatted like original cards. It includes user management and an interface for creating or editing personalized cards interactively.</div>
                 </div>
             </div>
         </div>
-        <div class="circle-transition-container">
-            <div class="circle-transition"></div>
+    </div>
+    <div class="who-i-am-frame">
+        <div class="who-i-am-sticky">
+            <div class="who-i-am-overflow-container">
+                <div class="who-i-am-container">
+                    <div class="who-i-am-content">
+                        <div class="who-i-am-background-text">WHOIAM</div>
+                        <div class="who-i-am-photography-container">
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/andorra.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/snow.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/setup.jpeg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/graduacion.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/longboard-downhill.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/sitges.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/croacia.jpg">
+                            </div>
+                            <div class="who-i-am-img-container">
+                                <img class="who-i-am-img" src="./media/photos/madrid.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="vertical-spacer"></div>
+    <div class="get-in-touch-frame">
+
     </div>
 </body>
 </html>

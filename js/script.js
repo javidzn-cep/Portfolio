@@ -9,12 +9,21 @@ let cursorX, cursorY, rollBarTransaltePerc = 0;
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', updateMouseMove);
     Array.from(document.querySelectorAll('.cursor-hoverable')).forEach(element => [{event: 'mouseenter', isHovering: true}, {event: 'mouseleave', isHovering: false}].forEach(obj => element.addEventListener(obj.event, () => document.querySelector('.cursor-frame').classList.toggle('cursor-hover', obj.isHovering))));
+    Array.from(document.querySelectorAll('.scroll-to-btn')).forEach(btn => btn.addEventListener('click', e => navigateTo(btn.dataset.scrollTo)))
     document.querySelector('.navigation-btn').addEventListener('click', toggleNavigation)
     document.querySelector('.navigation-outside').addEventListener('click', toggleNavigation)
     moveCursor();
     moveHeaderRentagle();
     moveMarquees();
 });
+
+function navigateTo(targetClassName){
+    toggleNavigation();
+    gsap.to(window, {
+        duration: 1.5,
+        scrollTo: {y: targetClassName, offsetY: 0}
+    });
+}
 
 function toggleNavigation(){
     document.querySelector('.navigation-frame').classList.toggle('navigation-shown');

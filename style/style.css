@@ -50,6 +50,7 @@
 
 body{
     background-color: var(--white);
+    overflow-x: hidden;
 }
 
 a{
@@ -323,7 +324,7 @@ a{
     aspect-ratio: 1/1;
     margin-right: 10px;
     border-radius: 50%;
-    background: url(../media/dev-photo.jpg);
+    background: url(../media/photos/portrait.jpg);
     background-size: contain;
     filter: grayscale(1);
 }
@@ -569,18 +570,17 @@ a{
 .works-background-text-container{
     position: sticky;
     top: 0;
-    height: 110vh;
+    height: 140vh;
 }
 
 .works-background-text{
     font-size: 30vw;
 	font-family: var(--font-serif);
     color: #2c2c2c;
+    user-select: none;
 }
 
-.vertical-spacer {
-    height: 100vh;
-}
+
 
 .work-container{
     display: flex;
@@ -601,21 +601,23 @@ a{
     align-items: center;
     justify-content: center;
     background-color: var(--white);
-    height: 80vh;
+    height: 70vh;
     width: 50vw;
     overflow: hidden;
 }
 
 .work-img-container{
-    background-color: var(--primary);
     border-radius: 10px;
-    width: 85%;
-    height: 70%;
+    width: 90%;
+    max-height: 90%;
     z-index: 2;
 }
 
 .work-bg-image-container{
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     top: 0;
     left: 0;
     width: 100%;
@@ -626,17 +628,32 @@ a{
     object-fit: cover;
     width: 100%;
     height: 100%;
+    transition: 0.7s ease-out;
+}
+
+
+.work-demostration-image{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 20px 0px var(--primary);
 }
 
 .work-info-container{
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
 .work-title-container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.work-img-frame:hover .work-bg-image{
+    width: 110%;
+    height: 110%;
 }
 
 .work-title{
@@ -647,11 +664,12 @@ a{
 .work-tags-container{
     display: flex;
     gap: 20px;
+    white-space: nowrap;
 }
 
 .work-tag{
     font-family: var(--font-terciary);
-    font-size: 20px;
+    font-size: 17px;
     border-bottom: 1px solid var(--gray);
     padding: 5px;
 }
@@ -659,6 +677,100 @@ a{
 .work-description{
     color: var(--gray);
     font-size: 18px;
+    text-align: justify;
+}
+
+
+/*____________________   WHO I AM   ____________________ */
+
+.who-i-am-frame{
+    padding-top: 50vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 700vh;
+    background-color: var(--black);
+}
+
+.who-i-am-sticky{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.who-i-am-overflow-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--white);
+
+}
+
+.who-i-am-container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50%;
+    left: 7.5vw;
+    transform: translateY(-50%);
+    background-color: var(--white);
+    height: 100vh;
+    width: 100vw;
+}
+
+.who-i-am-content {
+    opacity: 0;
+    /* transform: scale(0.5); */
+}
+
+.who-i-am-background-text{
+    position: absolute;
+    font-size: 36vw;
+	font-family: var(--font-serif);
+    color: #d8d8d8;
+    white-space: nowrap;
+    padding: 50px;
+    user-select: none;
+    transform: translateY(-50%);
+}
+
+.who-i-am-photography-container{
+    position: absolute;
+    display: flex;
+    gap: 25vw;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 50px 200px;
+    width: auto;
+}
+
+.who-i-am-img{
+    object-fit: contain;
+    height: 100%;
+    filter: grayscale(1);
+}
+
+.who-i-am-img-container{
+    height: 46vh;
+}
+
+.who-i-am-img-container:nth-child(even){
+    align-self: end;
+}
+
+.vertical-spacer {
+    position: relative;
+    height: 100vh;
 }
 
 
