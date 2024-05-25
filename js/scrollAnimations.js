@@ -11,35 +11,39 @@ function initAnimations(){
 }
 
 function worksAnimation(){
-    const worksBackgroundText = document.querySelector('.works-background-text-container')
-
-    gsap.to('.works-background-text', {
+    const worksBackgroundContainer = document.querySelector('.works-background-text-overflow')
+    gsap.to('.works-background-text-overflow', {
         scrollTrigger: {
             trigger: '.works-container',
-            start: 'top bottom',
+            start: 'top top',
             end: 'bottom top',
             scrub: 1,
         },
-        transform: `translateY(-${(worksBackgroundText.offsetHeight - window.innerHeight) / 2}px)`
+        transform: `translate(${(-worksBackgroundContainer.offsetWidth/2)}px, ${(-worksBackgroundContainer.offsetHeight*0.75)}px)`
     })
 }
 
 
 function galleryTransition() {
-    gsap.to('.who-i-am-overflow-container', {
+
+    const galleryContainer = document.querySelector('.gallery-container')
+    const hipo = Math.sqrt(Math.pow(window.innerHeight, 2) + Math.pow(window.innerWidth, 2)) + 100
+    galleryContainer.style.left = `${(hipo - window.innerWidth) / 2}px`
+
+    gsap.to('.gallery-overflow-container', {
         scrollTrigger: {
-            trigger: '.who-i-am-overflow-container',
+            trigger: '.gallery-overflow-container',
             start: 'bottom 90%',
             end: 'top top',
             scrub: 1,
 
         },
-        width: '120vw'
+        width: `${hipo}px`
     });
 
-    gsap.to('.who-i-am-content', {
+    gsap.to('.gallery-content', {
         scrollTrigger: {
-            trigger: '.who-i-am-content',
+            trigger: '.gallery-content',
             start: 'top 20%',
             end: 'top top',
             scrub: 1,
@@ -49,7 +53,7 @@ function galleryTransition() {
 }
 
 function galleryActivator() {
-    const imgs = Array.from(document.querySelectorAll('.who-i-am-img'));
+    const imgs = Array.from(document.querySelectorAll('.gallery-img'));
     imgs.forEach(img => imgLoadedInfo.push({id: img.id, loaded: false}));
     imgs.forEach(img => img.complete ? handleImageLoad(img) : img.addEventListener('load', () => handleImageLoad(img)));
 }
@@ -60,12 +64,12 @@ function handleImageLoad(img) {
 }
 
 function galleryAnimation(){
-    const galleryBackgroundText = document.querySelector('.who-i-am-background-text')
-    const galleryContainer = document.querySelector('.who-i-am-photography-container')
+    const galleryBackgroundText = document.querySelector('.gallery-background-text')
+    const galleryContainer = document.querySelector('.gallery-photography-container')
 
-    gsap.to('.who-i-am-background-text', {
+    gsap.to('.gallery-background-text', {
         scrollTrigger: {
-            trigger: '.who-i-am-frame',
+            trigger: '.gallery-frame',
             start: `${window.innerHeight * 2}px bottom`,
             end: 'bottom bottom',
             scrub: 1,
@@ -73,9 +77,9 @@ function galleryAnimation(){
         transform: `translate(-${galleryBackgroundText.offsetWidth - window.innerWidth}px, -50%)`
     });
 
-    gsap.to('.who-i-am-photography-container', {
+    gsap.to('.gallery-photography-container', {
         scrollTrigger: {
-            trigger: '.who-i-am-frame',
+            trigger: '.gallery-frame',
             start: `${window.innerHeight * 2}px bottom`,
             end: 'bottom bottom',
             scrub: 1,

@@ -1,2 +1,1 @@
 cambiar marquesinas, se superponen
-works, cambiar medidas de texto a relativas
