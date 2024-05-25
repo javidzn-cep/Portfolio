@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Javier Díaz Neira">
-    <title>Portfolio | Javier Díaz Neira</title>
+    <title>Javier Díaz Neira | Portfolio ©2024</title>
+    <link rel="icon" href="./media/isotype.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@100..900&family=Oswald:wght@200..700&family=Rufina:wght@400;700&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
@@ -16,6 +17,11 @@
     <script src="js/scrollAnimations.js"></script>
 </head>
 <body>
+    <div class="isotype-container cursor-hoverable scroll-to-btn" data-scroll-to=".header">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.94 100">
+            <path d="M79,6c-3.96-4-9.86-6-17.69-6h-30.35v76.3c0,3.64-1.61,5.46-4.83,5.46-1.69,0-2.9-.53-3.66-1.58-.75-1.04-1.13-2.44-1.13-4.16v-23.65H0v24.83c0,4.96,1.17,9.13,3.52,12.54,2.35,3.4,5.53,5.96,9.54,7.68,3.92,1.69,8.24,2.55,13,2.58.1.01.21.01.31.01h34.2c9.03,0,15.35-2.57,18.96-7.73,3.61-5.15,5.41-12.45,5.41-21.93V23.52c0-7.69-1.97-13.53-5.94-17.52ZM63.04,76.99c0,3.55-2.01,5.34-6.01,5.34h-3.77V17.5h2.42c2.96,0,4.94.49,5.9,1.44.97.97,1.46,3.12,1.46,6.45v51.59Z"/>
+          </svg>
+    </div>
     <div class="noise"></div>
     <div class="navigation-frame">
         <div class="navigation-btn cursor-hoverable">
@@ -30,7 +36,7 @@
                 <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".header">HOME</div>
                 <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".ido-frame">WHAT I DO</div>
                 <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".works-frame">SELECTED WORKS</div>
-                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".who-i-am-photography-container">ABOUT ME</div>
+                <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".who-i-am-frame">ABOUT ME</div>
                 <div class="navigation-link scroll-to-btn cursor-hoverable" data-scroll-to=".get-in-touch-frame">GET IN TOUCH!</div>
             </div>
             <div class="navigation-info">
@@ -47,7 +53,9 @@
         <div class="cursor"></div>
     </div>
     <div class="header">
-        <div class="background-circle absolute-center"></div>
+        <div class="background-circle-container">
+            <div class="background-circle absolute-center"></div>
+        </div>
         <div class="background-rectangle absolute-center"></div>
         <div class="header-text-container flex-center">
             <div class="header-title "><span class="header-photo"></span><span class="header-blend-mode">HI THERE!, IT'S <br>JAVIER DIAZ, A <span class="graphity-text">CREATIVE</span> WEB DEVELOPER</span></div>
@@ -116,7 +124,7 @@
                 <div class="ido-content-container">
                     <div class="ido-content-description">I craft unique, custom-coded websites tailored to your brand's identity. Emphasizing scalability, performance, accessibility, and captivating animations, I ensure a memorable user experience.</div>
                     <div class="ido-keywords-container">
-                        <div class="ido-keyword">CMS Integration</div>
+                        <div class="ido-keyword">MicroInteractions</div>
                         <div class="ido-keyword">Motion & Animations</div>
                         <div class="ido-keyword">3D Development</div>
                     </div>
@@ -188,7 +196,7 @@
                 <div class="works-background-text">WORKS</div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-1.jpg">
                     </div>
@@ -209,7 +217,7 @@
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-4.jpg">
                     </div>
@@ -231,7 +239,7 @@
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-2.jpg">
                     </div>
@@ -248,11 +256,11 @@
                             <div class="work-tag">BACK-END DEVELOPMENT</div>
                         </div>
                     </div>
-                    <div class="work-description">A rehabilitation game using a prosthesis, designed by <i>International University of Catalonia</i> Students, which is connected to an Arduino Uno, which sends data via serial port to a computer. Node.js captures the data and sends it through Socket.io to a web-based game, gamifying elbow recovery exercises. This was a rapid, eight-day project.</div>
+                    <div class="work-description">A rehabilitation game using a prosthesis, designed by Bioengineering Students at the <i>International University of Catalonia</i>, which is connected to an Arduino Uno, which sends data via serial port to a computer. Node.js captures the data and sends it through Socket.io to a web-based game, gamifying elbow recovery exercises. This was a rapid, eight-day project.</div>
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-3.jpg">
                     </div>
@@ -273,7 +281,7 @@
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-5.jpg">
                     </div>
@@ -294,7 +302,7 @@
                 </div>
             </div>
             <div class="work-container">
-                <div class="work-img-frame cursor-hoverable">
+                <div class="work-img-frame">
                     <div class="work-bg-image-container">
                         <img class="work-bg-image" src="./media/bg-textures/texture-6.jpg">
                     </div>
@@ -324,28 +332,28 @@
                         <div class="who-i-am-background-text">WHOIAM</div>
                         <div class="who-i-am-photography-container">
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/andorra.jpg">
+                                <img id="who-i-am-img-1" class="who-i-am-img" src="./media/photos/andorra.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/snow.jpg">
+                                <img id="who-i-am-img-2" class="who-i-am-img" src="./media/photos/snow.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/setup.jpeg">
+                                <img id="who-i-am-img-3" class="who-i-am-img" src="./media/photos/setup.jpeg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/graduacion.jpg">
+                                <img id="who-i-am-img-4" class="who-i-am-img" src="./media/photos/graduacion.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/longboard-downhill.jpg">
+                                <img id="who-i-am-img-5" class="who-i-am-img" src="./media/photos/longboard-downhill.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/sitges.jpg">
+                                <img id="who-i-am-img-6" class="who-i-am-img" src="./media/photos/sitges.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/croacia.jpg">
+                                <img id="who-i-am-img-7" class="who-i-am-img" src="./media/photos/croacia.jpg">
                             </div>
                             <div class="who-i-am-img-container">
-                                <img class="who-i-am-img" src="./media/photos/madrid.jpg">
+                                <img id="who-i-am-img-8" class="who-i-am-img" src="./media/photos/madrid.jpg">
                             </div>
                         </div>
                     </div>
@@ -353,9 +361,48 @@
             </div>
         </div>
     </div>
-    <div class="vertical-spacer"></div>
     <div class="get-in-touch-frame">
-
+        <div class="background-circle-container">
+            <div class="background-circle absolute-center"></div>
+        </div>
+        <div class="get-in-touch-scroll-to-top"></div>
+        <div class="get-in-touch-container">
+            <div class="get-in-touch-title-container">
+                <div class="get-in-touch-suggestion">Ready to transform your ideas into stunning web applications?</div>
+                <div class="get-in-touch-title">GET IN T<span class="get-in-touch-title-o"></span>UCH</div>
+            </div>
+            <div class="get-in-touch-links-frame">
+                <div class="get-in-touch-links-column">
+                    <div class="get-in-touch-links-title">NAVIGATION</div>
+                    <div class="get-in-touch-links-container">
+                        <div class="get-in-touch-link cursor-hoverable scroll-to-btn" data-scroll-to=".header">Home</div>
+                        <div class="get-in-touch-link cursor-hoverable scroll-to-btn" data-scroll-to=".ido-frame">What I Do</div>
+                        <div class="get-in-touch-link cursor-hoverable scroll-to-btn" data-scroll-to=".works-frame">Works</div>
+                        <div class="get-in-touch-link cursor-hoverable scroll-to-btn" data-scroll-to=".who-i-am-frame">About</div>
+                        <div class="get-in-touch-link cursor-hoverable scroll-to-btn" data-scroll-to=".get-in-touch-frame">Contact</div>
+                    </div>
+                </div>
+                <div class="get-in-touch-links-column">
+                    <div class="get-in-touch-links-title">SOCIALS</div>
+                    <div class="get-in-touch-links-container">
+                        <a class="get-in-touch-link cursor-hoverable" target="_blank" href="https://linkedin.com/in/javier-d%C3%ADaz-neira-120385153/">Linkedin</a>
+                        <a class="get-in-touch-link cursor-hoverable" target="_blank" href="https://instagram.com/javidzn">Instagram</a>
+                        <a class="get-in-touch-link cursor-hoverable" target="_blank" href="https://github.com/javidzn-cep">Github</a>
+                    </div>
+                </div>
+                <div class="get-in-touch-links-column">
+                    <div class="get-in-touch-links-title">CONTACT</div>
+                    <div class="get-in-touch-links-container">
+                        <div class="get-in-touch-link">javier.diaz51202@gmail.com</div>
+                        <div class="get-in-touch-link">+34 611 401 447</div>
+                    </div>
+                </div>
+            </div>
+            <div class="get-in-touch-watermark">
+                <div>©2024</div>
+                <div>JAVIER DIAZ</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

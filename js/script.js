@@ -9,7 +9,8 @@ let cursorX, cursorY, rollBarTransaltePerc = 0;
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mousemove', updateMouseMove);
     Array.from(document.querySelectorAll('.cursor-hoverable')).forEach(element => [{event: 'mouseenter', isHovering: true}, {event: 'mouseleave', isHovering: false}].forEach(obj => element.addEventListener(obj.event, () => document.querySelector('.cursor-frame').classList.toggle('cursor-hover', obj.isHovering))));
-    Array.from(document.querySelectorAll('.scroll-to-btn')).forEach(btn => btn.addEventListener('click', e => navigateTo(btn.dataset.scrollTo)))
+    Array.from(document.querySelectorAll('.scroll-to-btn')).forEach(btn => btn.addEventListener('click', () => navigateTo(btn.dataset.scrollTo)))
+    Array.from(document.querySelectorAll('.navigation-link')).forEach(link => link.addEventListener('click', toggleNavigation))
     document.querySelector('.navigation-btn').addEventListener('click', toggleNavigation)
     document.querySelector('.navigation-outside').addEventListener('click', toggleNavigation)
     moveCursor();
@@ -17,11 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     moveMarquees();
 });
 
-function navigateTo(targetClassName){
-    toggleNavigation();
+function navigateTo(target){
     gsap.to(window, {
         duration: 1.5,
-        scrollTo: {y: targetClassName, offsetY: 0}
+        scrollTo: {y: target, offsetY: 0}
     });
 }
 
@@ -45,7 +45,7 @@ function moveHeaderRentagle(){
     const cursorRect = document.querySelector('.cursor').getBoundingClientRect();
     const ratio = 0.01;
     const inclination = 30
-    rectangle.style.transform = `translate(${(-rectangle.offsetWidth / 2) - (cursorRect.left - rectangleRect.left ) * ratio}px, ${(-rectangle.offsetLeft / 2) -(cursorRect.top - rectangleRect.top) * ratio}px) rotate(${inclination}deg) `;
+    rectangle.style.transform = `translate(${(-rectangle.offsetWidth / 2) - (cursorRect.left - rectangleRect.left ) * ratio}px, ${(-rectangle.offsetHeight / 2) -(cursorRect.top - rectangleRect.top) * ratio}px) rotate(${inclination}deg) `;
     requestAnimationFrame(moveHeaderRentagle)
 }
 

@@ -14,10 +14,10 @@
     --font-graphity: "Sedgwick Ave Display", cursive;
 
     /* Others */
-    --nav-btn-absolute-spacing: 4vw;
+    --nav-btn-absolute-spacing: 5vw;
     --nav-btn-width: 50px;
     --nav-btn-active-inclitation: 40deg;
-    --nav-decorative-circle-width: 400px;
+    --nav-decorative-circle-width: 20vw;
     --nav-container-width: 30vw;
     --nav-links-font-size: 75px;
     --nav-left-space: 50px;
@@ -83,6 +83,21 @@ a{
 
 /*____________________   FIXED UI   ____________________ */
 
+.isotype-container{
+    position: fixed;
+    top: var(--nav-btn-absolute-spacing);
+    left: var(--nav-btn-absolute-spacing);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+    z-index: 9996;
+    user-select: none;
+}
+
+.isotype-container svg {
+    width: 60px;
+    fill: white;
+}
+
 
 .cursor-frame {
     position: fixed;
@@ -137,6 +152,7 @@ a{
     aspect-ratio: 1/1;
     z-index: 9998;
     mix-blend-mode: difference;
+    transform: translate(50%, -50%);
 
 }
 
@@ -348,9 +364,20 @@ a{
     transform: translate(-50%, -50%) rotate(30deg);
 }
 
+.background-circle-container{
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    height: 90vh;
+    width: 90vh;
+    transform: translateX(-50%);
+}
+
 .background-circle{
-    height: var(--header-circle-width);
+    object-fit: contain;
     aspect-ratio: 1/1;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     background: linear-gradient(0deg, rgba(204,204,204,0) 6%, rgba(204,204,204,0.7) 100%);
 }
@@ -768,10 +795,122 @@ a{
     align-self: end;
 }
 
-.vertical-spacer {
+/*____________________   GET IN TOUCH   ____________________ */
+
+.get-in-touch-frame {
     position: relative;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;    
 }
+
+.get-in-touch-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.get-in-touch-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15vh;
+}
+
+.get-in-touch-suggestion{
+    font-family: var(--font-terciary);
+    font-weight: 600;
+    font-size: 1.25vw;
+    color: var(--black);
+}
+
+.get-in-touch-title{
+    user-select: none;
+    display: flex;
+    align-items: baseline;
+    font-size: 16vw;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    line-height: 0.85em;
+    color: var(--black);
+}
+
+.get-in-touch-title-o {
+    display: inline-block;
+    vertical-align: baseline;
+    aspect-ratio: 1/1;
+    width: 0.85em;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.get-in-touch-links-frame{
+    display: flex;
+    width: 86vw;
+    margin-top: 10vh;
+    gap: 3vw;
+}
+
+.get-in-touch-links-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.get-in-touch-links-column:first-child{
+    flex: 2;
+}
+
+.get-in-touch-links-column{
+    flex: 1;
+}
+
+.get-in-touch-links-title{
+    font-family: var(--font-secondary);
+    padding-block: 10px;
+    margin-block: 10px;
+    color: var(--primary);
+    font-size: 30px;
+    border-bottom: 1px solid var(--primary);
+}
+
+.get-in-touch-links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.get-in-touch-link{
+    font-family: var(--font-terciary);
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+    white-space: nowrap;
+    width: min-content;
+}
+
+.get-in-touch-link.cursor-hoverable:hover{
+    transform: translateX(10px);
+}
+
+.get-in-touch-watermark{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 80px;
+    font-family: var(--font-primary);
+    font-weight: 900;
+    line-height: 1em;
+    color: var(--black);
+    opacity: 0.2;
+}
+
 
 
 /*____________________   ANIMATIONS   ____________________ */
