@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.navigation-btn').addEventListener('click', toggleNavigation)
     document.querySelector('.navigation-outside').addEventListener('click', toggleNavigation)
     moveCursor();
-    // moveHeaderRentagle();
+    moveHeaderRentagle();
     moveMarquees();
 });
 

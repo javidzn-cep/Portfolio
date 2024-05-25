@@ -92,6 +92,14 @@ a{
     background-color: var(--black);
 }
 
+.italic-text{
+    font-style: italic;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
 
 /*____________________   FIXED UI   ____________________ */
 
