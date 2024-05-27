@@ -1019,6 +1019,10 @@ a{
         --nav-decorative-circle-width: 90vw
     }
 
+    .background-rectangle{
+        display: none;
+    }
+
     .cursor-frame, .scroll-text{
         display: none;
     }
